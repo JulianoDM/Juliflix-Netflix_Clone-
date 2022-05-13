@@ -1,0 +1,346 @@
+
+/*ESTILOS GERAIS*/
+/* Reset da página para gerar margens e estilos padrões do browser, não utilizar ''*'', na internet existem outros reset */
+
+
+
+body,figure,img,div,header,nav,main,ul,li,a,p,section,article,h1,h2,footer{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    
+    
+    
+}
+
+body{
+    background-color: rgb(24, 24, 24);
+}
+
+
+figcaption{
+    display: none;
+}
+
+img{
+    /* O 100% serve para informar que o tamanho deve ocupar 100% da tela, então se aumentar ela segue junto o tamanho e vice versa */
+    /*width: 100% */
+    max-width: 1200px;
+}
+
+
+.container{
+    max-width: 2000px;
+    margin: 0 auto ;
+}
+
+
+/* ESTILO DO LOGO */
+.cabecalho{
+    background-color: #d5282a;
+    background-color: rgb(30, 30, 30);
+    padding: 30px 0px 15px
+}
+
+.cabecalho .cabecalho_logo{
+    text-align: center;
+}
+
+.cabecalho .cabecalho_logo img{
+    width: 50%;
+    max-width: 150px;
+    
+}
+
+/*ESTILO DO MENU*/
+
+/*Aqui tinhamos dois seletores que estavam usando a propriedade "display none" então juntamos os dois e usamos a propriedade apenas uma vez  */
+.cabecalho .cabecalho_menu, .cabecalho .cabecalho_menupesquisa{
+    display: none;
+}
+
+.cabecalho .cabecalho_menu{}
+
+.cabecalho .cabecalho_menu ul{
+    padding-top: 15px;
+}
+.cabecalho .cabecalho_menu li{
+    display: inline-block;
+}
+.cabecalho .cabecalho_menu a{
+    color: white;
+    padding-right: 10px;
+    margin-left: 30px;
+    font-size: 0.9rem;
+}
+
+/* ESTILO ÁREA DE CONFIGURAÇÃO */
+.cabecalho .cabecalho_menupesquisa{
+    text-align: right;
+}
+.cabecalho .cabecalho_menupesquisa ul{
+    padding-top: 15px;
+}
+.cabecalho .cabecalho_menupesquisa li{
+    display: inline-block;
+}
+.cabecalho .cabecalho_menupesquisa img{
+    width: 20px;
+    margin: 0px 80px -7px 0px;
+    cursor: pointer;
+}
+.cabecalho .cabecalho_menupesquisa a{
+    color: white;
+    padding-right: 120px;
+    font-size: 0.9rem;
+}
+
+#barradepesquisa{
+    border-radius: 5px;
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+
+
+/*SEÇÃO DESTAQUE*/
+.main{}
+
+/*iMAGEM DO FILME DESTAQUE*/
+/*Paddin é um espaçamento para dentro
+  Margin é um espaçamento para fora*/
+.secaoDestaque{
+    background-image: url("img/imagemdestaque.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 30px 20px 22px;
+}
+.secaoDestaque .secaoDestaque_imagemdestaque{
+    display: none;
+}
+.secaoDestaque .secaoDestaque_imagemdestaque img{}
+
+/*DESCRIÇÃO DO FILME DESTAQUE*/
+.secaoDestaque .secaoDestaque_descricaodestaque{
+    color: rgb(255, 255, 255);
+    max-width: 350px;
+    text-shadow: 1px 2px 2px black;
+
+}
+.secaoDestaque .secaoDestaque_descricaodestaque h1{}
+.secaoDestaque .secaoDestaque_descricaodestaque p{
+    margin: 10px 0 25px;
+    font-size: 1rem;
+}
+
+/*NAVEGAÇÃO DO FILME DESTAQUE*/
+.secaoDestaque .secaoDestaque_navegacaodestaque{}
+
+.playicone{
+    width: 20px;
+    margin: 0px 10px -5px 0px;
+}
+
+.secaoDestaque .secaoDestaque_navegacaodestaque a{
+    font-size: 1rem;
+    background-color: white;
+    color: black;
+    padding: 9px 13px;
+    border-radius: 2px;
+    font-weight: 500;
+    /*O ''Inline block'' permite definir uma largura e uma altura no elemento, altura essa que será ''respeitada'' pelos outros elementos.*/
+    display: inline-block;
+}
+
+.secaoDestaque .secaoDestaque_navegacaodestaque a:hover{
+    background-color: rgba(255, 255, 255, 0.764);
+
+
+}
+
+/*SEÇÃO FILMES*/
+/*AQUI TEMOS DOIS SELETORES JUNTOS*/
+.secaoFilmes .SecaoFilmes_listaFilmes, .secaoFilmes_secaoFilmes--verNovamente {
+    OVERFLOW-X: HIDDEN;
+    margin-top: 20px;
+}
+
+
+.secaoFilmes h2{
+    margin-top: 20px;
+    color: white;
+}
+
+/*AQUI TEMOS DOIS SELETORES JUNTOS*/
+.secaoFilmes .SecaoFilmes_listaFilmes, .secaoFilmes_secaoFilmes--verNovamente .secaoFilmes_listaverNovamente  {
+    display: flex;
+    flex-wrap: nowrap;
+    OVERFLOW-X: SCROLL;
+    margin-top: 10px;
+    
+
+}
+
+
+.secaoFilmes .SecaoFilmes_listaFilmes ul{}
+
+.secaoFilmes .SecaoFilmes_listaFilmes li, .secaoFilmes_secaoFilmes--verNovamente .secaoFilmes_listaverNovamente li{
+    padding-right: 10px;
+}
+.secaoFilmes .SecaoFilmes_listaFilmes li figure{}
+.secaoFilmes .SecaoFilmes_listaFilmes li img{}
+
+/*LER NOVAMENTE*/
+.secaoFilmes_secaoFilmes--verNovamente{}
+.secaoFilmes_secaoFilmes--verNovamente h2{
+    color: white;
+}
+.secaoFilmes_secaoFilmes--verNovamente .secaoFilmes_listaverNovamente{}
+.secaoFilmes_secaoFilmes--verNovamente .secaoFilmes_listaverNovamente ul{}
+.secaoFilmes_secaoFilmes--verNovamente .secaoFilmes_listaverNovamente li{}
+.secaoFilmes_secaoFilmes--verNovamente .secaoFilmes_listaverNovamente li figure{}
+.secaoFilmes_secaoFilmes--verNovamente .secaoFilmes_listaverNovamente li img{}
+
+/*RODAPÉ*/
+.rodape{
+    padding: 0 10px;
+    margin-top: 30px;
+    
+}
+
+/*RODAPÉ MIDIAS SOCIAIS*/
+.rodape .rodape_midiassociais{}
+.rodape .rodape_midiassociais ul{
+    display: flex;
+   
+}
+.rodape .rodape_midiassociais ul li{}
+.rodape .rodape_midiassociais ul a{}
+
+.youtubeicone{
+    width: 42px;
+}
+.instagramicone{
+    width: 25px;
+    margin-top: 8px;
+    margin-right: 10px;
+}
+.rodape .rodape_midiassociais ul img{
+    
+
+}
+
+/*RODAPÉ NAVEGAÇÃO*/
+.rodape .rodape_menuNavegação{
+    margin-top: 16px;
+}
+.rodape .rodape_menuNavegação ul{}
+
+.rodape .rodape_menuNavegação ul li{}
+
+.rodape .rodape_menuNavegação ul li a{
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    padding: 10px 7px;
+    margin: 0px 0px 0px;
+    border: 1px solid white;
+
+}
+
+.rodape .rodape_menuNavegação ul li a:hover{
+    background-color: rgba(255, 255, 255, 0.093);
+    
+    
+
+}
+
+
+
+
+@media screen and (min-width: 900px) {
+
+    .cabecalho .cabecalho_logo {
+        padding-left: 17px;
+    }
+    
+    
+    .cabecalho .cabecalho_menu, .cabecalho .cabecalho_menupesquisa{
+        display: block;
+        flex-grow: 1;
+      
+    }
+
+    .cabecalho .container{
+        display: flex;
+        
+    }
+
+    .cabecalho .cabecalho_logo img {
+        width: 80%;
+        max-width: 185px;
+        padding: 0px 0px 0px 0px;
+        margin: -10px 0px 0px 0px;
+        
+       
+    }
+    
+
+    
+
+
+}
+
+
+
+
+
+@media screen and (min-width: 600px) {
+    .secaoDestaque {
+        padding: 300px 55px 22px;
+    }   
+
+    .secaoDestaque .secaoDestaque_descricaodestaque h1 {
+        font-size: 2rem;
+    }
+
+    .secaoDestaque .secaoDestaque_descricaodestaque p {
+        margin: 10px 0 10px;
+        font-size: 1.2rem;
+    }
+
+    .secaoFilmes, .secaoFilmes_secaoFilmes--verNovamente {
+        padding: 15px 55px 0;
+
+    }
+    .secaoDestaque .secaoDestaque_descricaodestaque{
+        color: white;
+        max-width: 620px;
+    }
+
+    .rodape .rodape_midiassociais ul {
+        display: flex;
+        padding-left: 40px;
+    }
+
+    .rodape .rodape_menuNavegação {
+        margin-top: 16px;
+        padding-left: 40px;
+    }
+
+    .rodape  p {
+        margin-top: 16px;
+        padding-left: 40px;
+    }
+
+    
+    
+
+  
+}
+    
